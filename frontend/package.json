@@ -1,0 +1,39 @@
+{
+  "name": "FriendsFinderDesktop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/vuetify": "latest",
+    "consola": "latest",
+    "core-js": "^3.9.1",
+    "cross-env": "latest",
+    "express": "^4.17.1",
+    "nuxt": "^2.15.3",
+    "nuxt-socket-io": "^1.1.17",
+    "socket.io": "latest",
+    "socket.io-client": "^4.0.1",
+    "vue": "^2.6.12",
+    "vue-socket.io": "^3.0.10",
+    "vuetify": "latest",
+    "vuetify-loader": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "eslint-plugin-vuetify": "^1.0.0-beta.8",
+    "nodemon": "^2.0.7",
+    "stylus": "latest",
+    "stylus-loader": "latest"
+  }
+}
