@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   data() {
     return {
@@ -17,11 +19,13 @@ export default {
     };
   },
 
+  computed: mapState([ 'user', 'users', 'rooms' ]),
+
   methods: {
     send() {
       this.$socket.emit('createMessage', {
         text: this.text,
-        id: this.$store.state.user.id
+        id: this.user.user.id
       }, () => {
         if (typeof data === 'string') {
           console.error(data);

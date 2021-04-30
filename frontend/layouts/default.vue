@@ -44,8 +44,7 @@ export default {
 
     exit() {
       this.$socket.emit('userLeft', this.user.id, () => {
-        this.$router.push('/?message=leftChat');
-        this.clearData();
+        this.$router.push('/home');
       });
     }
   }

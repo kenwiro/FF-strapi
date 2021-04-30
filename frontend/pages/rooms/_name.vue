@@ -1,12 +1,12 @@
 <template>
-  <div class="c-wrap">
+  <div class="c-wrap" >
     <div class="c-chat" ref="block">
       <Message
         v-for="message in messages"
         :key="message.text"
         :name="message.name"
         :text="message.text"
-        :owner="message.id === user.id"
+        :owner="message.id === user.user.id"
       />
     </div>
     <div class="c-form">
@@ -17,16 +17,18 @@
 
 <script>
 import { mapState } from 'vuex';
-import Message from '../components/Message';
-import ChatForm from '../components/ChatForm';
+import Message from '../../components/Message';
+import ChatForm from '../../components/ChatForm';
 
 export default {
-  components: { Message, ChatForm },
+  components: { ChatForm, Message },
   middleware: [ 'chat' ],
   head() {
     return {
-      title: `Комната ${this.user.room}`
+      title: `Комната ${this.$route.params.name}`
     };
+  },
+  methods: {
   },
   computed: mapState([ 'user', 'messages' ]),
 

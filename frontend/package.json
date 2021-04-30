@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "dev": "concurrently  \"cross-env NODE_ENV=development nodemon server/index.js --watch server\" \"cd ../backend && npm run develop \"",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/strapi": "^0.3.1",
     "@nuxtjs/vuetify": "latest",
+    "concurrently": "^6.0.2",
     "consola": "latest",
     "core-js": "^3.9.1",
     "cross-env": "latest",

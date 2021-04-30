@@ -27,6 +27,7 @@ module.exports = {
 
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/strapi'
   ],
 
   vuetify: {
